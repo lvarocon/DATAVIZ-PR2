@@ -18,17 +18,6 @@ function initGraph2() {
 
   pathG2 = d3.geoPath().projection(projG2);
 
-  svgG2.append('path')
-    .datum({type: "Sphere"})
-    .attr('class', 'sphere')
-    .attr('d', pathG2);
-
-  const graticule = d3.geoGraticule();
-  svgG2.append('path')
-    .datum(graticule)
-    .attr('class', 'graticule')
-    .attr('d', pathG2);
-
   gG2LandMain = svgG2.append('g');
 
   const zoomG2 = d3.zoom()
