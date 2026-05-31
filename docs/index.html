@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AENA: Dos décadas, tres gráficos</title>
+    
+  <!-- librerias empleadas -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+
+  <!-- estilo -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="spinner"></div>
+    <div style="font-size: 1rem; font-weight: 600; color: var(--primary);">Cargando visualizaciones y datos de AENA...</div>
+  </div>
+	
+  <!-- estructura -->
+  <header>
+    <div class="header-content">
+      <div class="header-info">
+        <h1>AENA: Dos décadas, tres gráficos</h1>
+        <p>En este proyecto exploramos el tráfico aéreo gestionado por AENA. Poniendo el foco en el volumen de pasajeros, en los aeropuertos, aerolíneas y destinos internacionales. Hacemos también una observación a la evolución de los grandes fabricantes aeronáuticos.</p>
+      </div>
+      <div class="slider-container">
+        <span class="year-edge">2006</span>
+        <input type="range" id="year-slider" min="2006" max="2025" step="1" value="2025" />
+        <span class="year-edge">2025</span>
+        <div class="year-display" id="year-display">2025</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="card">
+      <h2>La batalla de las aerolíneas por el control de los cielos</h2>
+      <p class="description">Durante las últimas dos décadas, la batalla entre las aerolíneas por el control de los aeropuertos ha sido salvaje. Algunos viejos imperios se han ido desvaneciendo mientras que otras jóvenes aerolíneas se han ido comiendo el mercado. También se puede ver cómo el flujo de pasajeros se ha ido moviendo de unos aeropuertos a otros. Es lo que tiene la economía de escala.</p>
+      
+      <div class="vis-wrapper">
+        <div class="vis-container">
+          <svg id="map-svg" viewBox="0 0 920 560"></svg>
+        </div>
+        <div class="legend-panel">
+          <div class="leg-title">Pasajeros/año</div>
+          <div id="legend-size-items"></div>
+        </div>
+      </div>
+      <div class="legend-panel legend-bottom" style="margin-top: 12px;">
+        <div class="leg-title">Aerolínea Líder</div>
+        <div id="legend-items" class="legend-items-horizontal"></div>
+      </div>
+      <p class="graph-caption">Este gráfico muestra la aerolínea que opera más pasajeros por aeropuerto.</p>
+    </section>
+
+    <section class="card">
+      <h2>La democratización del turismo internacional</h2>
+      <p class="description">Esta batalla ha reducido con el tiempo, el precio del transporte aéreo. Además, la información disponible, las redes sociales y la globalización, han hecho que cada vez la gente viaje a países que  hace unos años creíamos imposibles. En el gráfico se aprecia cómo destinos que hace 20 años eran totalmente desconocidos, van ganando adeptos con el tiempo. También se aprecian los grandes HUBs internacionaes.</p>
+      
+      <div class="vis-wrapper">
+        <div class="vis-container">
+          <svg id="world-svg" viewBox="0 0 920 500"></svg>
+        </div>
+        <div class="legend-panel">
+          <div class="leg-title">Pasajeros anuales</div>
+          <div id="legend-world-items"></div>
+        </div>
+      </div>
+      <p class="graph-caption">Este gráfico muestra el volúmen de viajeros entre España y resto de países (vuelos directos).</p>
+    </section>
+
+    <section class="card">
+      <h2>Los gigantes aeronáuticos</h2>
+      <p class="description">Durante estos tantos años, podemos comprobar cómo ha pivotado el modelo de negocio de las aerolíneas. Se ve cómo hace años, las aerolíneas optaban por diversificar en cuanto a sus proveedores de aviones, mientras que ahora se centran más en un único proveedor. Esto se debe al sistema de licencias y entrenamiento de los pilotos, a la homogeización en cuanto a piezas de repuesto y mantenimiento y a los grandes contratos con los distintos fabricantes. También se aprecia cómo los aviones de pasillo único están ganando la batalla a los de doble pasillo, en gran medida gracias al desarrollo de aviones de largo alcance, a la reducción de costes de estos respecto a los de doble pasillo y a la flexibilidad que estos aviones otorga.</p>
+      
+      <div class="vis-wrapper" style="flex-direction: column;">
+        <div class="vis-container" style="padding: 20px 10px 10px; max-width: 760px;">
+          <svg id="sankey-svg" viewBox="0 0 920 580"></svg>
+        </div>
+      </div>
+	  <p class="graph-caption">Este gráfico muestra el volúmen de pasajeros operado por el top 10 de compañías, relacionando estas con el fabricante aeronáutico y la configuración de pasillo.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>Autor: Álvaro Ros</div>
+    <div>Datos: AENA - Estadísticas de tráfico aéreo 2006-2015</div>
+  </footer>
+
+  <div id="tooltip"></div>
+
+  <!-- Distintos modulos -->
+  <script src="js/map_bubbles.js"></script>
+  <script src="js/map_choropleth.js"></script>
+  <script src="js/sankey.js"></script>
+  <!-- main -->
+  <script src="js/main.js"></script>
+</body>
+</html>
