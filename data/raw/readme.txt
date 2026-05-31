@@ -1,0 +1,21 @@
+Archivos demasiado grandes para subirlos a github. Estas son las rutas:
+\data\raw\ppc2025.csv
+\data\raw\ppc2006.csv
+\data\raw\ppc2007.csv
+\data\raw\ppc2008.csv
+\data\raw\ppc2009.csv
+\data\raw\ppc2010.csv
+\data\raw\ppc2011.csv
+\data\raw\ppc2012.csv
+\data\raw\ppc2013.csv
+\data\raw\ppc2014.csv
+\data\raw\ppc2015.csv
+\data\raw\ppc2016.csv
+\data\raw\ppc2017.csv
+\data\raw\ppc2018.csv
+\data\raw\ppc2019.csv
+\data\raw\ppc2020.csv
+\data\raw\ppc2021.csv
+\data\raw\ppc2022.csv
+\data\raw\ppc2023.csv
+\data\raw\ppc2024.csv
