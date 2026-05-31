@@ -7,7 +7,7 @@ const colorRangeG2 = ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6", "#1d4ed8", "#1
 const colorScaleG2 = d3.scaleThreshold().domain(thresholdValuesG2).range(colorRangeG2);
 
 const NO_DATA_COLOR_G2 = "#e2e8f0";
-const SPAIN_COLOR_G2 = "#94a3b8";
+const SPAIN_COLOR_G2 = "#ffffff";
 
 function initGraph2() {
   svgG2 = d3.select("#world-svg");

@@ -292,6 +292,14 @@ main {
   cursor: grabbing;
 }
 
+#world-svg {
+  background-color: #4a4a4a;
+  cursor: grab;
+}
+#world-svg:active {
+  cursor: grabbing;
+}
+
 /* El mapa coroplético */
 .country {
   stroke: #ffffff;
