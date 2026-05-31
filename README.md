@@ -2,7 +2,7 @@
 
 Este proyecto muestra una visualización de datos con **D3.js** y **HTML/CSS vanilla** que permite explorar la evolución del tráfico aéreo gestionado por AENA entre los años 2006 y 2025. 
 
-El proyecto consta de una parte de procesamiento y limpieza de datos mediante el uso de scripts en **Python (Pandas)** la web donde se efectua la visualización.
+El proyecto consta de una parte de procesamiento y limpieza de datos mediante el uso de scripts en Python y de la web donde se presenta la visualización.
 
 ---
 
