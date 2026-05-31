@@ -19,3 +19,4 @@ Archivos demasiado grandes para subirlos a github. Estas son las rutas:
 \data\raw\ppc2022.csv
 \data\raw\ppc2023.csv
 \data\raw\ppc2024.csv
+Subo un archivo ejemplo llamado ppc2025 - head.csv
